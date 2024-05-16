@@ -10,13 +10,14 @@ function Car() {
 
   const updateManyCharacteristics = () => {
     setCar(previousState => {
-      return { ...previousState, color: "blue", year: "2020" }
+      return { ...previousState, color: "blue", year: "2020", brand: "Pescarolo" }
     });
   }
 
   return (
     <>
-      <h1>My {car.brand}</h1>
+      <h1>Use State with objects</h1>
+      <h3>My {car.brand}</h3>
       <p>
         It is a {car.color} {car.model} from {car.year}.
       </p>
