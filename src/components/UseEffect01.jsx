@@ -1,18 +1,17 @@
 import { useState, useEffect } from "react";
-import ReactDOM from "react-dom/client";
 
 function UseEffectExample() {
   const [count, setCount] = useState(0);
   const [calculation, setCalculation] = useState(0);
 
   /**
-   * It will trigger each time an STATE is changed.
+   * It will trigger each time the STATE "COUNT" is changed.
    */
   useEffect(() => {
     setCalculation(() => count * 2);
     console.log("State has been changed.")
 
-  }, [count]); // <- add the count variable here. Only re-run the effect if count changes.
+  }, [count]); // <- add the count variable here.
 
   return (
     <>

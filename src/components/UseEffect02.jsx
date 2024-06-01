@@ -30,8 +30,11 @@ const UseEffect02 = () => {
   );
 };
 
-function getUsers() {
-  return [{"id":1,"username":"Paul"},{"id":2,"username": "Lisa"}]
+async function getUsers() {
+  const response = await fetch("https://fakestoreapi.com/users")
+  const data = await response.json();
+  return data;
+  //return [{"id":1,"username":"Paul"},{"id":2,"username": "Lisa"}]
 }
 
 export default UseEffect02
