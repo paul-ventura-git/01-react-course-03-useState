@@ -10,6 +10,7 @@ function Car() {
 
   const updateManyCharacteristics = () => {
     setCar(previousState => {
+      console.log(car);
       return { ...previousState, color: "blue", year: "2020", brand: "Pescarolo" }
     });
   }
